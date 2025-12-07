@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer theme {
+    :root {
+        /* Candy Theme Colors */
+        --color-candy-pink: #FF9EB5;
+        --color-candy-blue: #89CFF0;
+        --color-candy-yellow: #FFF5BA;
+        --color-candy-green: #B2F0E8;
+        --color-candy-purple: #E0BBE4;
+        --color-candy-text: #4A4A4A;
+
+        /* Fonts */
+        --font-bubble: 'Fredoka', sans-serif;
+        --font-body: 'Nunito', sans-serif;
+
+        /* Animations */
+        --animate-float: float 6s ease-in-out infinite;
+        --animate-bounce-slow: bounce 3s infinite;
+
+        /* Border Radius */
+        --radius-3xl: 1.5rem;
+        --radius-4xl: 2rem;
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-15px);
+        }
+    }
+}
+
+/* Global Reset & Base Styles */
+@layer base {
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        background-color: var(--color-gray-50);
+        font-family: var(--font-body);
+        color: var(--color-candy-text);
+    }
+}
